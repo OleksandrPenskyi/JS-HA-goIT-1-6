@@ -33,6 +33,7 @@ const bookShelf = {
   // Пиши код выше этой строки
 };
 
+// Проверка
 console.log(bookShelf.addBook('Мгла'));
 // Вызов метода bookShelf.addBook('Мгла') возвращает строку 'Добавляем книгу Мгла'.
 
