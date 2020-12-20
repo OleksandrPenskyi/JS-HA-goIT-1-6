@@ -17,4 +17,4 @@ for (const key in apartment) {
 }
 
 console.log(keys);
-console.log(values)
+console.log(values);
