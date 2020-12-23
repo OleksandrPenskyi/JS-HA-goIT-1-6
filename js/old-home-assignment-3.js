@@ -265,14 +265,7 @@ const account = {
    * Метод создает и возвращает объект транзакции.
    * Принимает сумму и тип транзакции.
    */
-  createTransaction(amount, type) {
-    const newTransaction = {
-      quantity: amount,
-      transactionType: type,
-    };
-    console.log(newTransaction);
-    return newTransaction;
-  },
+  createTransaction(amount, type) {},
 
   /*
    * Метод отвечающий за добавление суммы к балансу.
@@ -280,11 +273,7 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {
-    createTransaction(amount, type);
-
-    this.balance += this.createTransaction.quantity;
-  },
+  deposit(amount) {},
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -314,8 +303,11 @@ const account = {
   getTransactionTotal(type) {},
 };
 
-account.createTransaction(1000, Transaction.DEPOSIT);
+// account.createTransaction(1000, 'deposit');
+// account.createTransaction(1000, 'deposit');
+account.deposit(1000);
 // account.deposit(50);
 // !END Задание 7
 
-console.log(account.balance);
+console.log(`balance : ${account.balance}`);
+console.log(`history : ${account.transactions}`);
