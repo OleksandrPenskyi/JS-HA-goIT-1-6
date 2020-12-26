@@ -32,10 +32,10 @@
 // Функция возвращает число - количество свойств.
 
 // const countProps = function (obj) {
-// // создаем массив ключей с обьекта
+// создаем массив ключей с обьекта
 //   let objToArray = Object.keys(obj);
 
-// // считаем длину массива с ключами - т.е. количество свойств массива
+// считаем длину массива с ключами - т.е. количество свойств массива
 //   let arrayLength = objToArray.length;
 //   return arrayLength;
 // };
@@ -57,29 +57,29 @@
 // формате "имя": "кол-во задач".
 
 // const findBestEmployee = function (employees) {
-//   // Собираем массив из ключей
+// Собираем массив из ключей
 //   const employeeArr = Object.keys(employees);
 
-//   // Собираем массив из значений
+// Собираем массив из значений
 //   const ratingArr = Object.values(employees);
 
-//   // Предположим, наибольшее число у элемента массива valuesArr с нулевым индексом
+// Предположим, наибольшее число у элемента массива valuesArr с нулевым индексом
 //   let theBiggestNumber = ratingArr[0];
 
-//   // Предположим, лучший сотрудник это элемент массива keysArr с нулевым индексом
+// Предположим, лучший сотрудник это элемент массива keysArr с нулевым индексом
 //   let theBetterEmployee = employeeArr[0];
 
-//   // перебираем массив с оценками - ratingArr
-//   // начинаем с первого элемента массива, ибо нулевой якобы самый большой
-//   // Потому сравниваем нулевой (theBiggestNumber) с остальными элементами
+// перебираем массив с оценками - ratingArr
+// начинаем с первого элемента массива, ибо нулевой якобы самый большой
+// Потому сравниваем нулевой (theBiggestNumber) с остальными элементами
 //   for (let i = 1; i < ratingArr.length; i += 1) {
-//     //  Если 0 - й элемент меньше 1 - го, то theBiggestNumber присваиваем значение 1 - го элемента.
-//     //  Теперь 1 - й элемент у нас самый большой.
-//     //  На 2-й итерации сравниваем новое большее число со следующим числом массива и т.д.
+//  Если 0 - й элемент меньше 1 - го, то theBiggestNumber присваиваем значение 1 - го элемента.
+//  Теперь 1 - й элемент у нас самый большой.
+//  На 2-й итерации сравниваем новое большее число со следующим числом массива и т.д.
 //     if (ratingArr[0] < ratingArr[i]) {
-//       // true - наибольшее число становится элемент с индексом i
-//       theBiggestNumber = ratingArr[i];
-//       // true - и лучшим сотрудником становится соттрудник с этим же элементом i
+// true - наибольшее число становится элемент с индексом i
+// theBiggestNumber = ratingArr[i];
+// true - и лучшим сотрудником становится соттрудник с этим же элементом i
 //       theBetterEmployee = employeeArr[i];
 //     }
 //   }
@@ -125,10 +125,10 @@
 // const countTotalSalary = function (employees) {
 //   let total = 0;
 
-//   // Создаем массив из аргументов, которые принимает функция
+// Создаем массив из аргументов, которые принимает функция
 //   const salaryArr = Object.values(employees);
 
-//   // Перебираем массив и суммируем элементы
+// Перебираем массив и суммируем элементы
 //   for (const item of salaryArr) {
 //     total += item;
 //   }
@@ -136,10 +136,10 @@
 //   return total;
 // };
 
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
-// // console.log(countTotalSalary({})); // 0
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+// console.log(countTotalSalary({})); // 0
 
 // console.log(
 //   countTotalSalary({
@@ -170,17 +170,17 @@
 // ];
 
 // const getAllPropValues = function (arr, prop) {
-//   // Создаем пустой массив для наполнения его инфой
+// Создаем пустой массив для наполнения его инфой
 //   const newArray = [];
 
-//   // перебираем входящий массив обьектов
+// перебираем входящий массив обьектов
 //   for (let i = 0; i < arr.length; i += 1) {
-//     //   если i-ый обьект массива содержит имя свойства,
-//     // которое приходит из аргумента функции,
-//     // то значения этих обьектов массива пушим в новый массив - newArray
+//   если i-ый обьект массива содержит имя свойства,
+// которое приходит из аргумента функции,
+// то значения этих обьектов массива пушим в новый массив - newArray
 
-//     // елси имя свойства 'category' нет в обьекте,
-//     // то нчиего не пушиться в массив, иначе напушиться 4 undefined элемента
+// елси имя свойства 'category' нет в обьекте,
+// то нчиего не пушиться в массив, иначе напушиться 4 undefined элемента
 //     if (arr[i][prop]) {
 //       newArray.push(arr[i][prop]);
 //     }
@@ -189,9 +189,9 @@
 //   return newArray;
 // };
 
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
 // console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
 
 // console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
@@ -216,11 +216,11 @@
 // const calculateTotalPrice = function (allProdcuts, productName) {
 //   let total = 0;
 
-//   // перебираем массив обьектов
+// перебираем массив обьектов
 //   for (const item of allProdcuts) {
-//     //   если в элементе массива (одном из обьектов) значение
-//     // свойства "name" равняется искомому значению - productName
-//     //   то делаем расчет в том же обьекте со знаением его свойств
+//   если в элементе массива (одном из обьектов) значение
+// свойства "name" равняется искомому значению - productName
+//   то делаем расчет в том же обьекте со знаением его свойств
 //     if (item.name === productName) {
 //       total = item.price * item.quantity;
 //     }
@@ -228,9 +228,9 @@
 //   return total;
 // };
 
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
 // console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
 // console.log(calculateTotalPrice(products, 'Дроид')); // 2800
@@ -265,7 +265,19 @@ const account = {
    * Метод создает и возвращает объект транзакции.
    * Принимает сумму и тип транзакции.
    */
-  createTransaction(amount, type) {},
+  createTransaction(amount, type) {
+    // Создаем новый обект с разными типами операции
+    const newTransaction = {
+      moneyQuantity: amount,
+      transactionType: type,
+    };
+
+    // Добавляем свойство id для кажой операции
+    newTransaction.id = Math.round(Math.random() * (10 - 1) + 1);
+
+    // Добавяем в массив транзакций данную транзакцию со своим кол-вом денег и типом перации, и id
+    this.transactions.push(newTransaction);
+  },
 
   /*
    * Метод отвечающий за добавление суммы к балансу.
@@ -273,7 +285,14 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {},
+  deposit(amount) {
+    // Добавление суммы на счет к общему балансу (balance)
+    this.balance += amount;
+    console.log(`Ваш счет успешно пополнен на ${amount} UAH!`);
+
+    // Вызов ф-ции создания объекта транзакции (передаем сумму и тип операции по умолчанию: 'deposit')
+    this.createTransaction(amount, 'deposit');
+  },
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -284,30 +303,81 @@ const account = {
    * Если amount больше чем текущий баланс, выводи сообщение
    * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
-  withdraw(amount) {},
+  withdraw(amount) {
+    // Снимаем часть денег со счета, проверяем условие наличия денег на счету Клиента
+    if (amount > this.balance) {
+      console.log(
+        `Cнятие ${amount} UAH не возможно, недостаточно средств на счету!`,
+      );
+    } else {
+      this.balance -= amount;
+      console.log(`Сумма ${amount} UAH усешно снята с Вашего счета!`);
+    }
+
+    // Вызов ф-ции создания объекта транзакции (передаем сумму и тип операции по умолчанию: 'withdraw')
+    this.createTransaction(amount, 'withdraw');
+  },
 
   /*
    * Метод возвращает текущий баланс
    */
-  getBalance() {},
+  getBalance() {
+    console.log(`Сумма на Вашем счету: ${account.balance} UAH`);
+  },
 
   /*
    * Метод ищет и возвращает объект транзации по id
    */
-  getTransactionDetails(id) {},
+  getTransactionDetails(id) {
+    // Поиск операции по id
+    for (const item of this.transactions) {
+      if (item.id === id) {
+        console.log(`Ваша операция под номером ${id}:`);
+        console.log(item);
+        return;
+      }
+    }
+
+    console.log('Ваша операция не надена');
+  },
 
   /*
    * Метод возвращает количество средств
    * определенного типа транзакции из всей истории транзакций
    */
-  getTransactionTotal(type) {},
+  getTransactionTotal(type) {
+    console.log(`Все Ваши ${type} операции:`);
+    for (const item of this.transactions) {
+      if (item.transactionType.includes(type)) {
+        console.log(item);
+      }
+    }
+  },
 };
 
-// account.createTransaction(1000, 'deposit');
-// account.createTransaction(1000, 'deposit');
-account.deposit(1000);
-// account.deposit(50);
-// !END Задание 7
+// Положили деньги на счет (в 2 операции)
+account.deposit(150);
+account.deposit(850);
+account.deposit(2000);
+account.deposit(250);
 
-console.log(`balance : ${account.balance}`);
-console.log(`history : ${account.transactions}`);
+// Снимем деньги со счета
+account.withdraw(500);
+account.withdraw(250);
+account.withdraw(1500);
+
+// Вывод всех транзакций
+console.log(account.transactions);
+
+// Вывод всех транакций 'deposit'
+account.getTransactionTotal('deposit');
+
+// Вывод всех транакций 'withdraw'
+account.getTransactionTotal('withdraw');
+
+// Поиск денеэной операции по id (свойство обьекта)
+account.getTransactionDetails(7);
+
+// Вывод общей суммы баланса
+account.getBalance();
+// !END Задание 7
