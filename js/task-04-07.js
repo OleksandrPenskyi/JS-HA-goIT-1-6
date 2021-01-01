@@ -21,26 +21,16 @@ const orders = [
   { email: 'jacob@mail.com', dish: 'Taco' },
 ];
 
-// Пиши код ниже этой строки
 function composeMessage(position) {
-  const index = position - 1;
-  const message = `Готовим ${this[index].dish} для ${this[index].email}. Ваш заказ ${position}-й в очереди.`;
-  //   messages.push(message);
-
-  return message;
+  return `Готовим ${this[position].dish} для ${
+    this[position].email
+  }. Ваш заказ ${position + 1}-й в очереди.`;
 }
 
-const messages = [];
-
-composeMessage.call(orders, 1);
-
-// new Map[messages](message);
-
-composeMessage.call(orders, 2);
-composeMessage.call(orders, 3);
+const messages = orders.map((item, index, array) => {
+  return composeMessage.call(array, index);
+});
 
 console.log(messages);
-// Значение переменной messages это массив
-// ['Готовим Burger для solomon@topmail.ua. Ваш заказ 1-й в очереди.',
-// 'Готовим Pizza для artemis@coldmail.net. Ваш заказ 2-й в очереди.',
-// 'Готовим Taco для jacob@mail.com. Ваш заказ 3-й в очереди.'].
+// Переменной `messages` с помощью метода `map` присваивают значение - массив,
+// создаваемый вызовом функции`composeMessage`.Значение`this` при вызове функции переопределяется с помощью метода`call`
