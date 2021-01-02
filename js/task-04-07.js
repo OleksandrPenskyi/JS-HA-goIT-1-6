@@ -21,16 +21,26 @@ const orders = [
   { email: 'jacob@mail.com', dish: 'Taco' },
 ];
 
+// 1-й метод
+// function composeMessage(position) {
+//   return `Готовим ${this[position].dish} для ${
+//     this[position].email
+//   }. Ваш заказ ${position + 1}-й в очереди.`;
+// }
+
+// 2-й метод
 function composeMessage(position) {
-  return `Готовим ${this[position].dish} для ${
-    this[position].email
-  }. Ваш заказ ${position + 1}-й в очереди.`;
+  return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${
+    position + 1
+  }-й в очереди.`;
 }
 
-const messages = orders.map((item, index, array) => {
-  return composeMessage.call(array, index);
-});
+// 1-й метод записи messages
+// const messages = orders.map((item, index) => {
+//   return composeMessage.call(item, index);
+// });
+
+// 2-й метод записи messages
+const messages = orders.map((item, index) => composeMessage.call(item, index));
 
 console.log(messages);
-// Переменной `messages` с помощью метода `map` присваивают значение - массив,
-// создаваемый вызовом функции`composeMessage`.Значение`this` при вызове функции переопределяется с помощью метода`call`
