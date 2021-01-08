@@ -38,12 +38,19 @@ Storage.prototype.addItem = function (newItem) {
   this.items.push(newItem);
 };
 
+// 1-й вариант записи функции
+// Storage.prototype.removeItem = function (item) {
+//   for (let i = 0; i < this.items.length; i += 1) {
+//     if (this.items[i] === item) {
+//       this.items.splice(i, 1);
+//     }
+//   }
+// };
+
+// 2-й вариант записи функции
 Storage.prototype.removeItem = function (item) {
-  for (let i = 0; i < this.items.length; i += 1) {
-    if (this.items[i] === item) {
-      this.items.splice(i, 1);
-    }
-  }
+  const indexOfArray = this.items.indexOf(item);
+  this.items.splice(indexOfArray, 1);
 };
 
 // Пиши код выше этой строки
