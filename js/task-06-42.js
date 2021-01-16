@@ -79,23 +79,10 @@ const users = [
 ];
 
 // Пиши код ниже этой строки
-
-// // !Вариант № 1
-// const getNamesSortedByFriendCount = users =>
-//   [...users]
-//     .sort((a, b) => a.friends.length - b.friends.length)
-//     .flatMap(item => item.name);
-
-// // !Вариант № 2
-// const getNamesSortedByFriendCount = users => {
-//   return [...users]
-//     .sort((a, b) => a.friends.length - b.friends.length)
-//     .flatMap(item => item.name);
-// };
-
 const getNamesSortedByFriendCount = users => {
   return [...users]
     .sort((a, b) => a.friends.length - b.friends.length)
-    .flatMap(item => item.name);
+
+    .map(item => item.name);
 };
 console.log(getNamesSortedByFriendCount(users));
